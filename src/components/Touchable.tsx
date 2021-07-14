@@ -1,21 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { FunctionComponent } from "react";
+import PropTypes from "prop-types";
 import {
   View,
   TouchableOpacity,
   TouchableNativeFeedback,
   ViewPropTypes,
-} from 'react-native';
-import {
-  IS_ANDROID,
-  IS_LT_LOLLIPOP,
-  noop,
-} from './utils';
+  StyleProp,
+  ViewStyle,
+} from "react-native";
+import { IS_ANDROID, IS_LT_LOLLIPOP, noop } from "../utils";
 
-const Touchable = ({
-  onPress,
-  style,
-  buttonColor,
+type Props = {
+  onPress: () => void;
+  style?: StyleProp<ViewStyle>;
+  buttonColor?: string;
+  children: React.ReactNode;
+};
+
+const Touchable: FunctionComponent<Props> = ({
+  onPress = noop,
+  style = {},
+  buttonColor = "red",
   children,
 }) => {
   if (IS_ANDROID && !IS_LT_LOLLIPOP) {
@@ -26,7 +31,8 @@ const Touchable = ({
       >
         <View
           style={[
-            style, {
+            style,
+            {
               backgroundColor: buttonColor,
             },
           ]}
@@ -41,7 +47,8 @@ const Touchable = ({
     <TouchableOpacity
       onPress={onPress}
       style={[
-        style, {
+        style,
+        {
           backgroundColor: buttonColor,
         },
       ]}
@@ -49,19 +56,6 @@ const Touchable = ({
       {children}
     </TouchableOpacity>
   );
-};
-
-Touchable.propTypes = {
-  onPress: PropTypes.func,
-  style: ViewPropTypes.style,
-  buttonColor: PropTypes.string,
-  children: PropTypes.node.isRequired,
-};
-
-Touchable.defaultProps = {
-  onPress: noop,
-  style: {},
-  buttonColor: 'red',
 };
 
 export default Touchable;

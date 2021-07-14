@@ -1,4 +1,7 @@
-# react-native-fab
+# rn-fab
+
+> Based on the [react-native-fab](https://github.com/sidevesh/react-native-fab)
+
 A FAB button component for Android and iOS, customizable, simple and as per material design specs.
 
 ![FAB demo](https://media.giphy.com/media/eUa3ywxwoBwwE/giphy.gif)
@@ -24,14 +27,14 @@ import FAB from 'react-native-fab'
 <FAB buttonColor="red" iconTextColor="#FFFFFF" onClickAction={() => {console.log("FAB pressed")}} visible={true} iconTextComponent={<Icon name="all-out"/>} />
 ```
 ## Options
-| Prop        | Type           | Effect  | Default Value |
-| ------------- |-------------| -----| -----|
-| visible | boolean | Show or hide the FAB | true |
-| buttonColor | string | The color of FAB | red |
-| onClickAction | function | Function to be called when button is pressed | ()=>{} |
-| iconTextColor | color | The  color of icon of FAB | #FFFFFF |
+| Prop              | Type      | Effect                                                                                                  | Default Value    |
+| ----------------- | --------- | ------------------------------------------------------------------------------------------------------- | ---------------- |
+| visible           | boolean   | Show or hide the FAB                                                                                    | true             |
+| buttonColor       | string    | The color of FAB                                                                                        | red              |
+| onClickAction     | function  | Function to be called when button is pressed                                                            | ()=>{}           |
+| iconTextColor     | color     | The  color of icon of FAB                                                                               | #FFFFFF          |
 | iconTextComponent | component | Text component or any other component based on it, works great with Icon from react-native-vector-icons | `<Text>+</Text>` |
-| snackOffset | number | The amount by which to move up the FAB to accomodate snackbar | 0 |
+| snackOffset       | number    | The amount by which to move up the FAB to accomodate snackbar                                           | 0                |
 
 ## Note
 

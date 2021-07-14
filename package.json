@@ -1,15 +1,17 @@
 {
-  "name": "react-native-fab",
-  "version": "1.0.17",
+  "name": "rn-fab",
+  "version": "1.0.0",
   "description": "A FAB button component for Android and iOS, customizable, simple and as per material design specs.",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib",
   "scripts": {
+    "build": "rm -rf lib && tsc --project ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint --fix ./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sidevesh/react-native-fab.git"
+    "url": "git+https://github.com/WeslleyNasRocha/rn-fab.git"
   },
   "keywords": [
     "react-native",
@@ -22,19 +24,23 @@
     "android",
     "ios"
   ],
-  "author": "sidevesh",
+  "author": "WeslleyNasRocha",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SiDevesh/react-native-fab/issues"
+    "url": "https://github.com/WeslleyNasRocha/rn-fab/issues"
   },
-  "homepage": "https://github.com/sidevesh/react-native-fab#readme",
+  "homepage": "https://github.com/WeslleyNasRocha/rn-fab#readme",
   "devDependencies": {
+    "@types/react": "^17.0.14",
+    "@types/react-native": "^0.64.12",
+    "@types/react-native-snackbar-component": "^1.1.1",
     "babel-eslint": "^7.2.3",
     "eslint": "^5.11.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "typescript": "^4.3.5"
   },
   "peerDependencies": {
     "react": ">=15.3.1",
