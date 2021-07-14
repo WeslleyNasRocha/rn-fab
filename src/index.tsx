@@ -10,7 +10,6 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
 } from "react-native";
 import { Touchable } from "./components";
 import { noop } from "./utils";

@@ -1,11 +1,9 @@
 import React, { FunctionComponent } from "react";
-import PropTypes from "prop-types";
 import {
-  View,
-  TouchableOpacity,
-  TouchableNativeFeedback,
-  ViewPropTypes,
   StyleProp,
+  TouchableNativeFeedback,
+  TouchableOpacity,
+  View,
   ViewStyle,
 } from "react-native";
 import { IS_ANDROID, IS_LT_LOLLIPOP, noop } from "../utils";

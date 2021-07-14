@@ -1,5 +1,5 @@
 {
-  "name": "rn-fab",
+  "name": "rn-fab-animated",
   "version": "1.0.0",
   "description": "A FAB button component for Android and iOS, customizable, simple and as per material design specs.",
   "main": "lib/index.js",
